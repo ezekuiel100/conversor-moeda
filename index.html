@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conversor de moedas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
+      <h1>Converter Moeda</h1>
 
-        <h1>Conveter Moeda</h1>
+      <form>
+        <div class="input-container">
+          <p>Quantia em reais:</p>
+          <input type="number" class="quantia" placeholder="Reais" />
+        </div>
 
-        <form>
-            <div class="input-container">
-                
-                <label>Quantia em reais:</label>
-                <input type="number" class="quantia" placeholder="Reais">
-            </div>
-            
-            
-            <button>Converter</button>
-            
-            <label>Dolar:</label>
-            <div class="resultado"></div>
-        </form>
+        <button>Converter</button>
 
+        <p>Dolar:</p>
+        <div class="resultado"></div>
+      </form>
     </div>
-</body>
-
+  </body>
 </html>

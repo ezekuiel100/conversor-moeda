@@ -1,16 +1,15 @@
-let quanti = document.querySelector(".quantia")
-let btn = document.querySelector("button")
-let resultado = document.querySelector(".resultado")
+let quantia = document.querySelector(".quantia");
+let botaoConverter = document.querySelector("button");
+let resultado = document.querySelector(".resultado");
 
-
-
-async function meodas(){
-    let url = `https://api.exchangerate.host/convert?from=BRL&to=USD&amount=${quanti.value}`
-   let a = await fetch(url)
-   let b = await a.json()
-   console.log(resultado.innerHTML = b.result)
-   
+async function converterMoeda() {
+  let requestURL = `https://api.exchangerate.host/convert?from=BRL&to=USD&amount=${quantia.value}`;
+  let response = await fetch(requestURL);
+  let data = await response.json();
+  resultado.textContent = data.result.toFixed(2);
 }
 
-
-btn.addEventListener("click" , meodas)
+botaoConverter.addEventListener("click", (e) => {
+  e.preventDefault();
+  converterMoeda();
+});
